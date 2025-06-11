@@ -5,25 +5,45 @@ A simple Django REST Framework-based API that allows:
 - Freelancers to send proposals
 - Clients to accept/reject proposals (only one can be accepted per project)
 
-## 🔧 Features
+##  Features
 
-- Custom user model with user type (client/freelancer)
-- JWT Authentication (Simple JWT)
-- Project creation (clients only)
-- Proposal submission (freelancers only)
-- View proposals for a project (owner only)
-- Accept/Reject proposals
-- Swagger API docs
-- Pagination enabled
-- Simple unit tests included
+- Custom user model with roles: `client` and `freelancer`
+- JWT Authentication with access & refresh tokens
+- Clients can create projects
+- Freelancers can submit proposals
+- Clients can view proposals and accept/reject them
+- One proposal can be accepted per project
+- Protected access with custom permissions
+- Paginated project listing
+- API documentation using Swagger (drf-yasg)
+- Unit test included
 
-## 🛠️ Installation
+##  Installation
 
-```bash
-git clone <repo_url>  # یا فایل زیپ رو ازبین ببرید
-cd freelance_api
-python -m venv venv
-source venv/bin/activate  # یا venv\Scripts\activate در ویندوز
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+1. Clone the repo or unzip the project:
+   ```bash
+   git clone <your_repo_url>
+   cd freelance-api
+
+
+
+## DOCS
+
+http://127.0.0.1:8000/swagger/
+http://127.0.0.1:8000/redoc/
+
+
+## TEST
+python manage.py test
+
+
+## Project Structure
+freelance-api/
+├── config/
+│   └── settings.py, urls.py, ...
+├── core/
+│   └── models.py, views.py, serializers.py, urls.py, ...
+├── manage.py
+├── requirements.txt
+├── README.md
+└── .gitignore
