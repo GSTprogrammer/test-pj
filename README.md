@@ -22,7 +22,7 @@ A simple Django REST Framework-based API that allows:
 
 1. Clone the repo or unzip the project:
    ```bash
-   git clone <your_repo_url>
+   git clone https://github.com/GSTprogrammer/test-pj/tree/main
    cd freelance-api
 
 
